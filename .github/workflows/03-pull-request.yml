@@ -18,4 +18,4 @@ jobs:
     #     creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Trigger Azure Machine Learning job
       run: |
-        echo "Will add code checks here in next challenge"
+        echo "Will add magico code checks here in next challenge"
