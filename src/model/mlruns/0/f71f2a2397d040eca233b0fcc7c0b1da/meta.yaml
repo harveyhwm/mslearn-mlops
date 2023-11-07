@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/Harvey.Manhood/Documents/github/harveyhwm/mslearn-mlops/src/model/mlruns/0/f71f2a2397d040eca233b0fcc7c0b1da/artifacts
+end_time: 1699299674439
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: f71f2a2397d040eca233b0fcc7c0b1da
+run_name: awesome-zebra-802
+run_uuid: f71f2a2397d040eca233b0fcc7c0b1da
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1699299667958
+status: 3
+tags: []
+user_id: Harvey.Manhood
