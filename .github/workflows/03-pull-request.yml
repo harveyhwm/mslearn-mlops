@@ -18,7 +18,7 @@ jobs:
     #     creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Trigger Azure Machine Learning job
       run: |
-        echo "Will add more magico rico code checks here in next challenge"
+        echo 'Will add more magico rico code checks here in next challenge'
     
   call-workflow:
     uses: harveyhwm/mslearn-mlops/.github/workflows/04-code-checks.yml@main
