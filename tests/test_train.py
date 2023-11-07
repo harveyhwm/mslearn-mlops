@@ -1,18 +1,18 @@
 from model.train import get_csvs_df
-import os
 import pytest
+import os
 
 
 def test_csvs_no_files():
     with pytest.raises(RuntimeError) as error:
-        get_csvs_df("./")
-    assert error.match("No CSV files found in provided data")
+        get_csvs_df('./')
+    assert error.match('No CSV files found in provided data')
 
 
 def test_csvs_no_files_invalid_path():
     with pytest.raises(RuntimeError) as error:
-        get_csvs_df("/invalid/path/does/not/exist/")
-    assert error.match("Cannot use non-existent path provided")
+        get_csvs_df('/invalid/path/does/not/exist/')
+    assert error.match('Cannot use non-existent path provided')
 
 
 def test_csvs_creates_dataframe():
