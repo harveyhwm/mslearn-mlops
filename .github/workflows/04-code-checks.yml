@@ -27,6 +27,9 @@ jobs:
     - name: Install PyTest
       run: |
         python -m pip install pytest
+    - name: Install MLFlow
+      run: |
+        python -m pip install mlflow
     - name: Run linting tests
       run: | 
         flake8 ${{ inputs.linting-path }}
