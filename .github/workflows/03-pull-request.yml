@@ -16,5 +16,4 @@ jobs:
     uses: harveyhwm/mslearn-mlops/.github/workflows/04-code-checks.yml@main
     with:
       linting-path: 'src/model'
-    with:
       testing-path: 'tests/test_train.py'
