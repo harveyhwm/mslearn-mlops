@@ -2,7 +2,10 @@ name: Code checks
 
 on:
   workflow_call:
-  # workflow_dispatch:
+    inputs:
+      config-path:
+        required: true
+        type: string
 
 jobs:
   job1:
@@ -20,4 +23,4 @@ jobs:
         python -m pip install flake8
     - name: Run linting tests
       run: | 
-        flake8 src/model/
+        flake8 ${{ inputs.config-path }}

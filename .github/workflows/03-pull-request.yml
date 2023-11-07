@@ -22,3 +22,5 @@ jobs:
     
   call-workflow:
     uses: harveyhwm/mslearn-mlops/.github/workflows/04-code-checks.yml@main
+    with:
+      config-path: 'src/model'
