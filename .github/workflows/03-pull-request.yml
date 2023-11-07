@@ -19,3 +19,6 @@ jobs:
     - name: Trigger Azure Machine Learning job
       run: |
         echo "Will add more magico code checks here in next challenge"
+    
+  call-workflow:
+    uses: harveyhwm/mslearn-mlops/.github/workflows/04-code-checks.yml@latest
