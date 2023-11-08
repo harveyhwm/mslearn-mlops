@@ -1,0 +1,40 @@
+name: Run Development & Production Training Cycles
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  experiment:
+    environment: Development
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Trigger Azure Machine Learning job
+      run: |
+        az ml job create --file src/job.yml -g recursos_magicos -w ml-magico1 --debug --stream
+
+  production:
+    needs: experiment
+    environment: Production
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Trigger Azure Machine Learning job
+      run: |
+        az ml job create --file src/job-prod.yml -g recursos_magicos -w ml-magico1
