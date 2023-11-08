@@ -1,6 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
 name: mlflow-deployment
-endpoint_name: diabetes-endpoint
+endpoint_name: my-sexy-endpoint
 model: azureml:my-sexy-model@latest
   # name: my-sexy-model
   # version: 1
