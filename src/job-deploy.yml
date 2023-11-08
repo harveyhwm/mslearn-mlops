@@ -2,5 +2,8 @@ $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.sch
 name: mlflow-deployment
 endpoint_name: my-sexy-endpoint
 model: azureml:my-sexy-model@latest
-instance_type: Standard_F8s_v2
-instance_count: 1
+environment: 
+  conda_file: src/conda.yaml
+  image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04:latest
+instance_type: Standard_E4s_v3
+instance_count: 3
