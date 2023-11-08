@@ -1,0 +1,21 @@
+name: Deploy Latest Version of Model to Managed Endpoint
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    environment: Production
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Deploy Azure ML Job
+      run: |
+        az ml online-deployment create --name mlflow-deployment --endpoint diabetes-endpoint -f src/job-deploy.yaml --all-traffic
