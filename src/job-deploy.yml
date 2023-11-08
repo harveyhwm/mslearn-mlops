@@ -2,9 +2,5 @@ $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.sch
 name: mlflow-deployment
 endpoint_name: my-sexy-endpoint
 model: azureml:my-sexy-model@latest
-  # name: my-sexy-model
-  # version: 1
-  # local_path: model
-  # model_format: mlflow
-instance_type: Standard_F2s_v2
+instance_type: Standard_F8s_v2
 instance_count: 1
