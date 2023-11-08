@@ -1,9 +1,10 @@
 name: Run Development & Production Training Cycles
 
 on:
-  push:
-    branches:
-      - 'main'
+  workflow_dispatch:
+  #push:
+  #  branches:
+  #    - 'main'
 
 jobs:
   experiment:
