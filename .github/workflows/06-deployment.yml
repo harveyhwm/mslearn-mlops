@@ -4,7 +4,21 @@ on:
   workflow_dispatch:
 
 jobs:
-
+  endpoint:
+    environment: Production
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out repo
+      uses: actions/checkout@main
+    - name: Install az ml extension
+      run: az extension add -n ml -y
+    - name: Azure login
+      uses: azure/login@v1
+      with:
+        creds: ${{secrets.AZURE_CREDENTIALS}}
+    - name: Create Azure ML Endpoint
+      run: |
+        az ml online-endpoint create -g recursos_magicos -w hmmlw2 -f src/job-endpoint.yml
 
   deploy:
     needs: endpoint
