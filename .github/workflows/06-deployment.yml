@@ -35,4 +35,4 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Deploy Azure ML Job
       run: |
-        az ml online-deployment create --name mlflow-deployment --endpoint my-sexy-endpoint-2 -g recursos_magicos -w hmmlw2 -f src/job-deploy.yml --all-traffic --debug
+        az ml online-deployment create --name mlflow-deployment --endpoint credit-risk-endpoint-1 -g recursos_magicos -w hmmlw2 -f src/job-deploy.yml --all-traffic --debug

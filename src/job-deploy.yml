@@ -1,7 +1,7 @@
 $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
 name: credit-risk-deployment-1
 endpoint_name: credit-risk-endpoint-1
-model: azureml:my-sexy-model@latest
+model: azureml:credit-risk-model-v1@latest
 environment: 
   conda_file: conda.yml
   image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu20.04:latest
