@@ -21,7 +21,7 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Trigger Azure Machine Learning job
       run: |
-        az ml job create --file src/job.yml -g recursos_magicos -w ml-magico1 --debug --stream
+        az ml job create --file src/job.yml -g recursos_magicos -w hmmlw2 --debug --stream
 
   production:
     needs: experiment
@@ -38,4 +38,4 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Trigger Azure Machine Learning job
       run: |
-        az ml job create --file src/job-prod.yml -g recursos_magicos -w ml-magico1
+        az ml job create --file src/job-prod.yml -g recursos_magicos -w hmmlw2

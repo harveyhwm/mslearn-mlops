@@ -18,7 +18,7 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Create Azure ML Endpoint
       run: |
-        az ml online-endpoint create -g recursos_magicos -w ml-magico1 -f src/job-endpoint.yml
+        az ml online-endpoint create -g recursos_magicos -w hmmlw2 -f src/job-endpoint.yml
 
   deploy:
     needs: endpoint
@@ -35,4 +35,4 @@ jobs:
         creds: ${{secrets.AZURE_CREDENTIALS}}
     - name: Deploy Azure ML Job
       run: |
-        az ml online-deployment create --name mlflow-deployment --endpoint my-sexy-endpoint-2 -g recursos_magicos -w ml-magico1 -f src/job-deploy.yml --all-traffic --debug
+        az ml online-deployment create --name mlflow-deployment --endpoint my-sexy-endpoint-2 -g recursos_magicos -w hmmlw2 -f src/job-deploy.yml --all-traffic --debug

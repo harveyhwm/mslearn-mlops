@@ -1,6 +1,6 @@
 $schema: https://azuremlschemas.azureedge.net/latest/managedOnlineDeployment.schema.json
-name: mlflow-deployment
-endpoint_name: my-sexy-endpoint-2
+name: credit-risk-deployment-1
+endpoint_name: credit-risk-endpoint-1
 model: azureml:my-sexy-model@latest
 environment: 
   conda_file: conda.yml
